@@ -1,1 +1,1 @@
-web: gunicorn flask_form_1:app
+web: gunicorn flask_form_1.wsgi
