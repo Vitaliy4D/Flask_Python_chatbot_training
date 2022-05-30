@@ -1,2 +1,3 @@
 .migrations/
+.test1/
 .data.sqlite
