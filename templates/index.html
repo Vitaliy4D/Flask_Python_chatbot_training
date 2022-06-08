@@ -14,8 +14,8 @@
             <ul class="nav">
             <li><a class="nav-link active" href="{{ url_for('index') }}">Home</a></li>
             <li><a class="nav-link" href="{{ url_for('parser') }}">Parser</a></li>
-            <li><a class="nav-link" href="{{ url_for('graphs') }}">Graphs(Pandas)</a></li>
-            <li><a class="nav-link" href="{{ url_for('ml') }}">ML test</a></li>
+            <li><a class="nav-link" href="{{ url_for('graphs') }}"></a></li>
+            <li><a class="nav-link" href="{{ url_for('ml') }}">ML chatbot</a></li>
             <li><a class="nav-link" href="{{ url_for('sq_lite') }}">SQLlite</a></li>
             <li><a class="nav-link" href="{{ url_for('api_out') }}">API out test</a></li>
             </ul>
@@ -23,9 +23,12 @@
      
                     
     {% block content %}
-    <p> <h3>My practices of Python, Flask (and some use of Bootstrap), SQlite, some API</h3> </p>
+    <div class="container-fluid">
+     <p> <h3>My practices of Python,<br>
+         Flask (and some use of Bootstrap),<br>
+         SQlite and some API</h3> </p>
 
-   
+    </div>
     {% endblock %}    
                 
     

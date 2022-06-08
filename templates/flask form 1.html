@@ -1,13 +1,14 @@
 {% extends 'index.html' %}
 
 {% block content %}
+<div class="container-fluid">
 <p><h3>Training parsing different sites</h3></p>
-
+</div>
 
 
 <form method="post" class="container row g-3 col-auto-fluid">
 
-  <div class="col-sm-4 col-lg-5 mb-1 py-3">
+  <div class="col-sm-4 col-lg-6 mb-1 py-3">
   <div class="card p-3">
     <figure class="p-3 mb-0">
       <blockquote class="blockquote">
@@ -61,9 +62,10 @@ Paste other link on top <br> <br>
 
 Info from the link you entered: {{ link }} 
 <p></p>
-{% for i in range(output[0]|length)  %}
+{% for i in range(output1|length)  %}
 
-<div class="container themed-container">News {{ i+1 }} : {{ output[0][i] }} </div>
+<div class="container themed-container" style="font-weight:bold">Petition {{ i+1 }} :  </div>
+{{ output1[i] }}
 
 {% endfor %}
 
@@ -72,11 +74,29 @@ Info from the link you entered: {{ link }}
 Info from the link you entered: {{ link2 }} 
 <p></p>
 
-{% for i in range(output[1]|length)  %}
 
-<div class="container themed-container"> {{ i+1 }} : {{ output[1][i] }} </div>
+<blockquote class="form-control">
 
-{% endfor %}
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name / Total Paid This Week / Total Paid Today / Total Users Paid Today</th>
+      </tr>
+    </thead>
+
+  {% for i in range(output2|length)  %}
+
+    <tbody>
+      <tr>
+        <th scope="row">{{i+1}}</th>
+        <td>{{output2[i]}}</td>
+      </tr>
+    </tbody>
+  
+  {% endfor %}
+  </table>  
+</blockquote>
 
 {% else %}
 
